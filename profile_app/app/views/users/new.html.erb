@@ -1,0 +1,8 @@
+<h1>애브리샤워 회원님을 소개합니다!</h1>
+<p>인사를 나눠봐요~~</p>
+<form action='/users' method='POST'>
+  <input type='hidden' name='authenticity_token' value='<%= @token %>'></input>
+  <input type='text' name='name'></input>
+  <input type='text' name='content'></input>
+  <input type='submit'></input>
+</form>

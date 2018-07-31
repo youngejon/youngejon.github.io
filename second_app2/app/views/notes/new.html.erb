@@ -1,0 +1,9 @@
+<h1>이름과 이메일을 알려주세요</h1>
+<h3>Please Let us know your Name & E-mail </h3>
+<form action='/notes' method='POST'>
+  <input name='authenticity_token' type='hidden' value=<%= @token %>></input>
+  이름 <input name='input_title' type='text'></input><br>
+  이메일<input name='input_content' type='text'></input>
+  <input type='submit'></input>
+</form>
+<a href='/notes'>목록 - 홈으로 - </a>

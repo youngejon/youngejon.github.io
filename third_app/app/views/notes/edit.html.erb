@@ -1,0 +1,9 @@
+<p>기존 글을 수정해 보아요!</p>
+<form action='/notes/<%= @note.id %>' method='POST'> <!-- # router /notes/create로 가라! -->
+  <input type='hidden' name="_method" value='patch'></input>
+  <input type='hidden' name='authenticity_token' value='<%= @token %>'></input>
+  <input name='note_id' type='hidden' value='<%= @note.id %>'></input>  <!-- @note.id가 없다면 어떤 일이 생길까? 10번글을 11번 글로 바꿀 수 있지 않을까? -->
+  <input name='input_title'type='text' value='<%= @note.title %>'></input>
+  <input name='input_content'type='text' value='<%= @note.content %>'></input>
+  <input type='submit'></input>
+</form>

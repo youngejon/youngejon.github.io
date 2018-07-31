@@ -1,0 +1,8 @@
+<h1>Article#new</h1>
+<p>Find me in app/views/article/new.html.erb</p>
+<form action='/articles' method='POST'>
+  <input type='hidden' value='<%= form_authenticity_token %>' name='authenticity_token'></input>
+  <input type='text' name='title'></input>
+  <input type='text' name='content'></input>
+  <input type='submit'></input>
+</form>

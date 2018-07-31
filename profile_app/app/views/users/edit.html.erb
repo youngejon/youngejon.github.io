@@ -1,0 +1,11 @@
+<h1>회원 정보를 수정해 주세요!</h1>
+<p>변동된 내용이 있으시면 수정해주세요~!</p>
+<form action='/users/<%= @user.id %>' method='POST'>
+  <input type='hidden' name='_method' value='patch'></input>
+  <input type='hidden' name='authenticity_token' value='<%= @token %>'></input>
+  <input type='hidden' name='user_id' value='<%= @user.id %>'></input>
+  <input type='text' name='name' value='<%= @user.name %>'></input>
+  <br>
+  <input type='text' name='content' value='<%= @user.content %>'></input>
+  <input type='submit'></input>
+</form>

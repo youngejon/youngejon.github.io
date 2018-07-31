@@ -1,0 +1,21 @@
+<h1>모든 노트들 목록입니다</h1>
+<h2><a href='/notes/new'>New note</a></h2>
+<ul>
+  <%= @notes.each do |note| %>
+    <li><a href='/notes/<%= note.id %>'><%= note.title %></a></li>
+  <% end %>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

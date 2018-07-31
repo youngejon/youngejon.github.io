@@ -1,0 +1,9 @@
+<h1>이메일을 수정해 보아요</h1>
+<form action='/notes/<%= @note.id %>' method='POST'>
+  <input type="hidden" name="_methos" value="patch">
+  <input type="hidden" name='authenticity_token' value=<%= @token %>></input>
+  이름 <input name='input_title' type='text' value=<%= @note.title>></input><br>
+  이메일<input name='input_content' type='text'></input><br>
+  <input type='submit'></input>
+</form>
+<a href='/notes'>목록 - 홈으로 - </a>

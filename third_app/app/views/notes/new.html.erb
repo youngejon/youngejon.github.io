@@ -1,0 +1,8 @@
+<p>새 글을 등록해 보아요!</p>
+<form action='/notes' method='POST'> <!-- # router /notes/create로 가라! --><!-- method를 지정해주지 않으면 기본방식은 get -->
+  <input name='authenticity_token' type='hidden' value='<% @token %>'></input> <!-- html에서는 'authenticity_token'을 입력해 줘야 함!  name은 정석이므로 외워라!-->
+  <input name='input_title'type='text'></input>
+  <input name='input_content'type='text'></input>
+  <input type='submit'></input>
+</form>
+

@@ -1,0 +1,12 @@
+<h1>Articles#new</h1>
+
+<p><%= link_to 'index', articles_path %></p>  <!-- rails engine이 자동으로 바꿔준다 -->
+
+<%= render 'form', article: @article %> <!-- form 라는 애를 불러올건데.. -->
+
+<!--<form action='/articles' method='POST'>-->
+<!--  <input type='hidden' value='<%= form_authenticity_token %>' name='authenticity_token'></input>-->
+<!--  <input type='text' name='article[title]'></input>-->
+<!--  <input type='text' name='article[content]'></input>-->
+<!--  <input type='submit'></input>-->
+<!--</form>-->

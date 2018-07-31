@@ -1,0 +1,8 @@
+<h1>애브리샤워를 사랑해주는 회원님들~!</h1>
+<p>한분 한분 반겨주세요~!</p>
+<a href='/users/new'>회원 등록하기</a><br><br><br>
+  <!-- user를 클릭하면 해당 유저의 페이지로 넘어가기 -->
+<%= @users.each do |user| %>
+  <a href='/users/<%= user.id %>'><%= user.name %></a><br>
+  <!--<img src ='https://st3.depositphotos.com/7646640/13028/v/950/depositphotos_130280996-stock-illustration-cute-little-yellow-duck-icon.jpg'>-->
+<% end %>

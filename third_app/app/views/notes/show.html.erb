@@ -1,0 +1,30 @@
+<h1><%= @note.id %>::<%= @note.title %></h1>
+<p><%= @note.content %></p>
+<a href='/notes'>목록</a>
+<a href='/notes/<%= @note.id %>' 
+    data-confirm='삭제하시겠습니까?' 
+    data-method='delete'>삭제</a>
+<a href='/notes/<%= @note.id %>/edit'>수정</a>
+<p><a href='/notes/new'>새로 만들기</a></p>
+
+<hr />
+<form action='/comments' method='POST'>
+    <input type='hidden' name='authenticity_token' value='<%= @token %>'></input>
+    <input type='hidden' name='note_id' value='<%= @note.id %>'></input>    <!-- note_id를 추가해줘야한다! -->
+    Comment: <input type='text' name='input_content'></input>
+    <input type='submit'></input>
+</form>
+
+<!--<%#= @comments.each do |comment| %>-->
+<!--    <p><%# comment.content %> | x</p>-->
+<!--<%# end %>-->
+<%= @note.comments.each do |comment| %>
+    <p>
+        <%= comment.content %>   |
+        <a href='/comments/<%= comment.id %>'
+           data-confirm= '댓글을 삭제합니다.'
+           data-method='DELETE'>    <!-- a tag에서 삭제할 때는 data-method='DELETE'를 적용해준다! -->
+           --삭제--
+        </a>
+    </p>
+<% end %>

@@ -1,0 +1,25 @@
+<h1> <%= @note.id %> 번글 페이지입니다</h1>
+<ul>
+  <li><%= @note.title %></li>
+  <li><%= @note.content %></li>
+  <a href='/notes'>목록</a>
+  <a href='/notes/new'>생성</a>
+  <a href='/notes/<%= @note.id %>' 
+     data-confirm='삭제하시겠습니까?' 
+     data-method='delete'>삭제</a>
+  <a href='/notes/<%= @note.id %>/edit'>수정</a>
+</ul>
+<hr />
+<form action='/comments' method='POST'>
+  <input type='hidden' name='note_id' value=<%= @note.id %>></input>
+  <strong>Comment: </strong>
+  <input type='hidden' name='authenticity_token' value=<%= @token%>></input>
+  <input type='text' name='input_content'></input>
+  <input type='submit'></input>
+</form>
+
+<%#= @comments.each do |comment| %>
+  <p>
+    <%#= comment.content %> | x
+  </p>
+<%# end %>

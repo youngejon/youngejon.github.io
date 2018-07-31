@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LayoutAp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    
+    <header class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top">
+    <div class="container">
+      <% link_to "Layout App", root_path, id: 'logo', class: 'navbar-brand' %>
+      <!-- Toggle Button-->
+      <button class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toogle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <!-- nav bar -->
+      <nav class="collapse navbar-collapse" id="navbarNav"></nav>
+        <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav ml-auto"s>
+            <li class="nav-it"><%= link_to 'Home', root_path, class: 'nav-link' %></li>
+            <li class="nav-it"><%= link_to 'Help', help, class: 'nav-link' %></li>
+            <li class="nav-it"><%= link_to 'Log in', '#', class: 'nav-link' %></li>
+
+          </ul>
+        </ul>
+      
+      
+    </div>
+    
+    </header>
+    
+    <div class="container"></div>
+    <%= yield %>
+  </body>
+</html>

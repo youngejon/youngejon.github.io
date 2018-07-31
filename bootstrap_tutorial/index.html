@@ -1,0 +1,77 @@
+<!DOCTYPE html>  <!-- '!'를 쓰고 tab키 누르면 간편하게 가능! -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- Bootstrao CSS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+  <!-- custom CSS-->
+  <link rel="stylesheet" href="css/custom.css" type="text/css" />
+  <!-- animate CSS -->
+  <link rel="stylesheet" href="css/animate.css" type="text/css" />
+</head>
+<body>
+  <header>
+    <h3 class="text-center text-white bg-primary py-2 mb-0 wow bounce" >Steve LEE's profile!</h3>
+  </header>
+  <section class="bg-light border-bottom py-3">
+    <div class="container">
+      <div class="d-inline-block profile-img">
+        <img src="http://upload2.inven.co.kr/upload/2017/01/11/bbs/i15599136853.png" height="220px" class="rounded-circle wow flipInX"></img>
+      </div>
+      <article class="d-inline-block align-middle ml-3 my-3 profile-text wow bounceInUp">
+        <h1 class="font-weight-bold mb-0 profile-h1">Steve LEE</h1>
+        <h2 class="font-weight-light">Gachon Univ</h2>
+        <h5 class="font-weight-ligh">안녕하세요 멋쟁이사자처럼 가천대학교 6기 이영전입니다!</h5>
+        <a href="https://likelion.net/" class="badge badge-info badge-pill">멋사 6기</a>
+        <a href="https://en.wikipedia.org/wiki/Hackathon" class="badge badge-primary badge-pill">해커톤</a>
+        <a href="https://rubyonrails.org/" class="badge badge-danger badge-pill">레일즈</a></a>
+        <a href="https://en.wikipedia.org/wiki/Front_and_back_ends" class="badge badge-dark badge-pill">백앤드</a>
+        <a href="https://www.laurencegellert.com/2012/08/what-is-a-full-stack-developer/" class="badge badge-success badge-pill">풀스택</a>
+        <a href="https://english.stackexchange.com/questions/44538/what-does-the-phrase-stay-hungry-stay-foolish-mean " class="badge badge-warning badge-pill">Stay Hungry&Foolisg</a>
+      </article>
+    </div>
+  </section>
+  
+  <!-- 사진 게시판  -->
+  <section class="container"> <!-- class="container" class="row" -->
+    <div class="row mt-3">
+      <div class="col-md-4 my-3">
+        <a href="#"><img src="https://i.amz.mshcdn.com/A9IrF47h7TDiati2a94scn8A8zA=/950x534/filters:quality(90)/2012%2F12%2F04%2F4d%2Fpixarnamesb.9xT.jpg" class="img-fluid gallery wow flipInX"></a>
+      </div>
+      <div class="col-md-4 my-3">
+        <a href="#"><img src="data:image/jpeg;base64,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" class="img-fluid gallery wow flipInX"></a>
+      </div>
+      <div class="col-md-4 my-3">
+        <a href="#"><img src="https://eddaz.files.wordpress.com/2016/10/steve-jobs.jpg" class="img-fluid gallery wow flipInX"></a>
+      </div>
+      <div class="col-md-4 my-3">
+        <a href="#"><img src="https://images.fastcompany.net/image/upload/w_596,c_limit,q_auto:best,f_auto,fl_lossy/wp-cms/uploads/2016/10/3064384-inline-i-1-designing-the-next-steve-jobs.jpg" class="img-fluid gallery wow flipInX"></a>
+      </div>
+      <div class="col-md-4 my-3">
+        <a href="#"><img src="https://i2.wp.com/tfortrends.com/wp-content/uploads/2018/02/stevejobs_1.jpeg?fit=522%2C282" class="img-fluid gallery wow flipInX"></a>
+      </div>
+      <div class="col-md-4 my-3">
+        <a href="#"><img src="https://qph.fs.quoracdn.net/main-qimg-b9f188e1152744742b8d320277842c8d-c" class="img-fluid gallery wow flipInX"></a>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="bg-primary">
+    <h1 class="text-white mb-0 text-center py-4 wow bounce">Contact me!</h1>    
+    <h1 class="text-white text-center mb-0 pb-5 font-weight-light wow bounce">leeyj0511@gmail.com</h1>
+  </footer>
+ 
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+  <script src="js/wow.min.js"></script>
+  <script>
+      new WOW().init();
+  </script>
+</body>
+</html>

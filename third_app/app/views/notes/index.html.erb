@@ -1,0 +1,8 @@
+<h1>모든 노트들 목록입니다!</h1>
+<h2><a href='/notes/new'>new Note!</a></h2>
+<ul>
+<%= @notes.each do |note| %> <!-- 꺽새 퍼센트 는  --> <!-- %와 %=의 차이는 무엇인가? -->
+  <li><a href='/notes/<%= note.id %>'><%= note.title %></a></li>
+<% end %>
+</ul>
+

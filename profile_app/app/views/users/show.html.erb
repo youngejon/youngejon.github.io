@@ -1,0 +1,37 @@
+<h1>안녕하세요 반갑습니다 ><</h1>
+<p>애브리샤워 회원님들 반가워요~</p>
+
+<%= @user.name %><br>
+<%= @user.content %><br>
+
+<hr />
+<a href='/users'>목록으로</a>
+<a href='/users/<%= @user.id %>/edit'>수정하기</a>
+<a href='/users/<%= @user.id %>'
+        data-confirm='delete'
+        data-method='delete'>삭제하기</a> <!-- 삭제하기... 어떻게 해야하지...? -->
+<!-- 기능 하나만 추가해보자! Model Association 응용! -->
+<p>My favorite is...</p>
+<%= @hobbies.each do |hobby| %>
+<!--<%#= hobby.find 1.title %>  <== 이거 에러남...  -->
+  <%= hobby.title %><br>
+  
+<% end %>
+<!-- 문제봉착... user 1의 취미를 보여줘야 하는데 다 보여주네... 어떻게 해야할까?? -->
+<hr />
+
+<!-- 댓글기능 구현하기 -->
+<form action='/comments' method='POST'>
+  <input type='hidden' name='authenticity_token' value='<%= @token %>'></input>
+  Comment: <input type='text' name='content'></input>
+  <input type='hidden' name='user_id' value='<%= @user.id %>'></input>
+  <input type='submit'></input>
+  
+</form>
+<hr />
+
+<!-- 댓글 뿌려주기 comment들을 웹상에 보여주기! -->
+<%= @comments.each do |comment| %>
+  <%= comment.content %><br>
+<% end %>
+
